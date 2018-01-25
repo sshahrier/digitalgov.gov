@@ -156,3 +156,58 @@ Add styles inside the media query below that you only want to be applied to the 
 		display: inline-block;
 	}
 }
+
+
+/* ====================== */
+/* Tools & Services */
+
+
+.list-nav{
+	margin: 0 auto;
+	font-size: 18px;
+	line-height: 24px;
+	width: 840px;
+}
+.list-nav ul{
+	margin: 0;
+	padding: 0;
+	max-width: 400px;
+	width: 100%;
+	display: inline-block;
+	float: right;
+}
+
+.list-nav ul:first-of-type{
+	float: left;
+}
+.list-nav li{
+	margin-bottom: 15px;
+	list-style-type: none;
+}
+
+.list-nav li a{
+	padding: 12px 16px;
+	border: 1px #9DA2A6 solid;
+	border-radius: 2px;
+	color:#000;
+	display: block;
+}
+.list-nav li a:hover{
+	border: 1px #000 solid;
+}
+
+#featured-events{
+	float: left;
+	width:300px;
+}
+#featured-events ul li{
+	list-style-type: none;
+}
+#featured-stories{
+	float: left;
+	width:600px;
+
+}
+#featured-stories ul li{
+	list-style-type: none;
+}

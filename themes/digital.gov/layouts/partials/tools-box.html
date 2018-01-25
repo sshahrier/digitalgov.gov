@@ -1,0 +1,33 @@
+<section id="tools-box">
+  <div class="container">
+    <div class="row">
+
+      <h2>Tools & Services</h2>
+      
+      <div class="list-nav">
+
+        {{ $featured := $.Site.Data.tools.featured }}
+        {{ $f_half := int (div (len $featured) 2) }}
+        {{ $.Scratch.Set "firsthalf" 0 }}
+        {{ $.Scratch.Set "secondhalf" 0 }}
+        <ul>
+        	{{ range $tool := $featured }}
+        		{{ $.Scratch.Add "firsthalf" 1}}
+        		{{ if le ($.Scratch.Get "firsthalf") $f_half }}
+        		<li><a href="{{ .url }}" title="{{ .name }}">{{ .name }}</a></li>
+        		{{ end }}
+        	{{ end }}
+        </ul>
+        <ul>
+        	{{ range $tool := $featured }}
+        		{{ $.Scratch.Add "secondhalf" 1}}
+        		{{ if gt ($.Scratch.Get "secondhalf") $f_half }}
+        		<li><a href="{{ .url }}" title="{{ .name }}">{{ .name }}</a></li>
+        		{{ end }}
+        	{{ end }}
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
